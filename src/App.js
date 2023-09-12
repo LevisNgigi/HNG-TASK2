@@ -4,9 +4,11 @@ import Home from './pages/Home';
 import MovieDetails from './components/MovieDetails';
 import MovieSearch from './components/MovieSearch';
 import Sidebar from './components/Sidebar';
+import { FavoritesProvider } from './pages/FavoritesContext';
+import Favorites from './components/Favorites'; 
+
 
 const App = () => {
-
   const [topMovies, setTopMovies] = useState([]);
 
   useEffect(() => {
@@ -19,6 +21,7 @@ const App = () => {
   }, []);
 
   return (
+    <FavoritesProvider> {/* Wrap your entire app with FavoritesProvider */}
       <div className="App">
         <Router>
           <div id="wrapper">
@@ -29,13 +32,14 @@ const App = () => {
                   <Route path="/" element={<Home topMovies={topMovies} />} />
                   <Route path="/movies/:id" element={<MovieDetails />} />
                   <Route path="/search-results" element={<MovieSearch />} />
+                  <Route path="/favorites" element={<Favorites />} />
                 </Routes>
               </div>
             </div>
           </div>
         </Router>
       </div>
-    
+    </FavoritesProvider>
   );
 };
 

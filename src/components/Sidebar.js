@@ -15,6 +15,8 @@ const Sidebar = () => {
         <li>
           <Link to="/search-results" className="">Search Results</Link>
         </li>
+        <li> <Link to="/favorites">Favorites</Link>
+</li>
       </ul>
     </nav>
   );

@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import '../App.css';
+import { useFavorites } from '../pages/FavoritesContext'; // Import the context
 
 const MovieDetails = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
-  const [isFavorite, setIsFavorite] = useState(false); // Step 1
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  const { addFavorite, removeFavorite } = useFavorites(); // Get the addFavorite and removeFavorite functions from the context
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=93995a9232ad6ced80265faeafc129b6`)
@@ -18,11 +21,15 @@ const MovieDetails = () => {
     return <div>Loading...</div>;
   }
 
-  // Convert release date to UTC format
   const releaseDate = new Date(movie.release_date).toUTCString();
 
-  const toggleFavorite = () => { // Step 2
+  const toggleFavorite = () => {
     setIsFavorite(prev => !prev);
+    if (!isFavorite) {
+      addFavorite(movie); // Add movie to favorites if it's not already there
+    } else {
+      removeFavorite(movie.id); // Remove movie from favorites if it's already there
+    }
   };
 
   return (
@@ -40,7 +47,7 @@ const MovieDetails = () => {
         <p className="overview">{movie.overview}</p>
 
         <button onClick={toggleFavorite}>
-          {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'} {/* Step 3 */}
+          {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
         </button>
       </div>
     </div>

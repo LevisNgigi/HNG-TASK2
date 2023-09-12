@@ -135,3 +135,9 @@
   color: #ffffff;
   background-color: #343a40;
 }
+.favorites-grid {
+  display: grid;
+
+  gap: 50px;
+}
+

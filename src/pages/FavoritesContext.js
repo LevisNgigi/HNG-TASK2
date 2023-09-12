@@ -27,3 +27,4 @@ export const useFavorites = () => {
   }
   return context;
 };
+export { FavoritesContext };

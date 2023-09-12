@@ -1,38 +1,6 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-
-const SearchContainer = styled.div`
-  margin-bottom: 20px;
-`;
-
-const SearchInput = styled.input`
-  padding: 5px;
-  margin-right: 30px;
-  border-radius: 50px;
-  widith: 300px;
-
-`;
-
-const SearchButton = styled.button`
-  padding: 5px 20px;
-  border-radius: 50%;
-
-`;
-
-const MovieGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-`;
-
-const MovieCard = styled.div`
-  text-align: center;
-`;
-
-const MoviePoster = styled.img`
-  max-width: 100%;
-`;
+import { SearchContainer, SearchInput, SearchButton, MovieGrid, MovieCard, MoviePoster } from '../MovieSearchStyles';
 
 const MovieSearch = () => {
   const [searchTerm, setSearchTerm] = useState('');

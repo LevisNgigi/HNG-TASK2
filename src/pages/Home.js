@@ -1,24 +1,9 @@
 import React from 'react';
+import { Container, Title, LoadingMessage } from '../pages/HomeStyles';
 import MovieCard from '../components/MovieCard';
-import styled from 'styled-components';
 import MovieSearch from '../components/MovieSearch';
 import '../MovieGridStyles.css'; 
 
-
-const Container = styled.div`
-  padding: 20px;
-  text-align: center;
-`;
-
-const Title = styled.h1`
-  font-size: 24px;
-  margin-bottom: 20px;
-`;
-
-const LoadingMessage = styled.div`
-  font-size: 18px;
-  margin-top: 20px;
-`;
 
 const Home = ({ topMovies }) => {
   return (

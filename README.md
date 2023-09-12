@@ -28,11 +28,12 @@ Builds the app for production to the `build` folder.
 - React
 - TMDB API
 
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://joyful-crostata-24536d.netlify.app/)
+
 ## Acknowledgements
 
 This project was built as part of a frontend stage two task.
 
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
 

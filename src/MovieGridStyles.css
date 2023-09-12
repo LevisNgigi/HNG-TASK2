@@ -1,0 +1,16 @@
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 50px;
+  }
+  
+  .movie-card {
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .movie-poster {
+    max-width: 100%;
+    height: auto;
+  }
+  

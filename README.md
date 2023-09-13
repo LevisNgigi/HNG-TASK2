@@ -7,7 +7,7 @@ This is a web application that allows users to search for movies, view details a
 
 ## How to Run
 
-1. Clone the repository: `git clone https://github.com/yourusername/movie-discovery-app.git`
+1. Clone the repository: `git clone https://github.com/Gmanlove/movie-discovery-app.git`
 2. Install dependencies: `npm install`
 3. Start the app: `npm start`
 Runs the app in the development mode.\

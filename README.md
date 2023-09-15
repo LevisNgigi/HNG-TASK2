@@ -30,7 +30,7 @@ Builds the app for production to the `build` folder.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
+- [Live Demo Link](https://sivel.netlify.app/)
 
 ## Acknowledgements
 

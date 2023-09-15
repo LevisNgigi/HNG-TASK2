@@ -30,10 +30,10 @@ Builds the app for production to the `build` folder.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://joyful-crostata-24536d.netlify.app/)
+- [Live Demo Link]()
 
 ## Acknowledgements
 
-This project was built as part of a frontend stage two task.
+This project was built as part of a frontend HNG  stage two task.
 
 
